@@ -1,6 +1,6 @@
 {
   "name": "@pentastory/messenger-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "JavaScript messenger UI library",
   "main": "dist/Messenger.js",
   "types": "dist/Messenger.d.ts",
