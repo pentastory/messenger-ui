@@ -17,8 +17,8 @@ export default class Messenger {
   private messageListArea: Element;
   private inputArea: Element;
 
-  constructor(options) {
-    this.element = options.element;
+  constructor(element: Element, options) {
+    this.element = element;
     this.header = this.createHeader();
     this.header.innerHTML = Header();
     this.messageListArea = this.createMessageListArea();
