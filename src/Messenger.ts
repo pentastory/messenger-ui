@@ -12,6 +12,11 @@ const InputArea = () => `
 `;
 
 export default class Messenger {
+  private element: Element;
+  private header: Element;
+  private messageListArea: Element;
+  private inputArea: Element;
+
   constructor(options) {
     this.element = options.element;
     this.header = this.createHeader();
