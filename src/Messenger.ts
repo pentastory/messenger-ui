@@ -44,4 +44,3 @@ export default class Messenger {
     return inputArea;
   }
 }
-
