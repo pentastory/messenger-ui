@@ -2,8 +2,10 @@
   "name": "messenger-ui",
   "version": "0.0.1",
   "description": "JavaScript messenger UI library",
-  "main": "index.js",
+  "main": "dist/Messenger.js",
+  "types": "dist/Messenger.d.ts",
   "scripts": {
+    "build": "tsc --project ./tsconfig.json --declaration --sourceMap && cp -r src/theme dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/pentastory/messenger-ui/issues"
   },
-  "homepage": "https://pentastory.github.io/messenger-ui/"
+  "homepage": "https://pentastory.github.io/messenger-ui/",
+  "devDependencies": {
+    "typescript": "^2.5.3"
+  }
 }
