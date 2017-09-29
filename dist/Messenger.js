@@ -3,8 +3,8 @@ exports.__esModule = true;
 var Header = function () { return "\n  <header>\n    <h4>Messenger</h4>\n  </header>\n"; };
 var InputArea = function () { return "\n  <form>\n    <input>\n    <button>&gt;</button>\n  </form>\n"; };
 var Messenger = /** @class */ (function () {
-    function Messenger(options) {
-        this.element = options.element;
+    function Messenger(element, options) {
+        this.element = element;
         this.header = this.createHeader();
         this.header.innerHTML = Header();
         this.messageListArea = this.createMessageListArea();

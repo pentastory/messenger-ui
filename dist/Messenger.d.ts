@@ -3,7 +3,7 @@ export default class Messenger {
     private header;
     private messageListArea;
     private inputArea;
-    constructor(options: any);
+    constructor(element: Element, options: any);
     createHeader(): HTMLDivElement;
     createMessageListArea(): HTMLDivElement;
     createInputArea(): HTMLDivElement;
