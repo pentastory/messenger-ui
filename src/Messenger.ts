@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import InputArea from './components/InputArea';
 import Message from './components/Message';
+
 export default class Messenger {
   private element: Element;
   private header: Element;
