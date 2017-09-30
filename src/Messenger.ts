@@ -15,19 +15,19 @@ export default class Messenger {
     this.inputArea = this.createInputArea();
   }
 
-  createHeader() {
+  private createHeader() {
     const header = document.createElement('div');
     this.element.appendChild(header);
     return header;
   }
 
-  createMessageListArea() {
+  private createMessageListArea() {
     const messageListArea = document.createElement('div');
     this.element.appendChild(messageListArea);
     return messageListArea;
   }
 
-  createInputArea() {
+  private createInputArea() {
     const inputArea = document.createElement('div');
     inputArea.innerHTML = InputArea();
     this.element.appendChild(inputArea);
@@ -39,13 +39,7 @@ export default class Messenger {
     return inputArea;
   }
 
-  addMessage(data) {
-    const message = document.createElement('div');
-    message.innerHTML = Message(data);
-    this.messageListArea.appendChild(message);
-  }
-
-  onSubmit(event: Event) {
+  private onSubmit(event: Event) {
     event.preventDefault();
 
     const input = this.inputArea.querySelector('input');
@@ -55,5 +49,11 @@ export default class Messenger {
     if (text === '') return;
 
     this.addMessage({ author: '', content: text, date: Date(), isMe: true });
+  }
+
+  addMessage(data) {
+    const message = document.createElement('div');
+    message.innerHTML = Message(data);
+    this.messageListArea.appendChild(message);
   }
 }
