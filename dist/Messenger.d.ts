@@ -4,7 +4,9 @@ export default class Messenger {
     private messageListArea;
     private inputArea;
     constructor(element: Element, options: any);
-    createHeader(): HTMLDivElement;
-    createMessageListArea(): HTMLDivElement;
-    createInputArea(): HTMLDivElement;
+    private createHeader();
+    private createMessageListArea();
+    private createInputArea();
+    private onSubmit(event);
+    addMessage(data: any): void;
 }
