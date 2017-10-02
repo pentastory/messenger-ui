@@ -16,6 +16,7 @@ var MessengerChatWidget = /** @class */ (function (_super) {
     function MessengerChatWidget(options) {
         var _this = this;
         var element = document.createElement('div');
+        element.classList.add('messenger-ui--chat-widget');
         document.body.appendChild(element);
         _this = _super.call(this, element, options) || this;
         return _this;
