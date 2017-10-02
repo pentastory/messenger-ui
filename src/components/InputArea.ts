@@ -1,5 +1,5 @@
 const InputArea = () => `
-  <form>
+  <form class="messenger-ui__input-area">
     <input>
     <button>&gt;</button>
   </form>

@@ -14,6 +14,9 @@ export default class Messenger {
     this.header.innerHTML = Header();
     this.messageListArea = this.createMessageListArea();
     this.inputArea = this.createInputArea();
+
+    this.element.classList.add('mesenger-ui');
+    this.messageListArea.classList.add('messenger-ui__message-list');
   }
 
   private createHeader() {

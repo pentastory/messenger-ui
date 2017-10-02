@@ -1,5 +1,5 @@
 const Header = () => `
-  <header>
+  <header class="messenger-ui__header">
     <h4>Messenger</h4>
   </header>
 `;

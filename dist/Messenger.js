@@ -10,6 +10,8 @@ var Messenger = /** @class */ (function () {
         this.header.innerHTML = Header_1["default"]();
         this.messageListArea = this.createMessageListArea();
         this.inputArea = this.createInputArea();
+        this.element.classList.add('mesenger-ui');
+        this.messageListArea.classList.add('messenger-ui__message-list');
     }
     Messenger.prototype.createHeader = function () {
         var header = document.createElement('div');
