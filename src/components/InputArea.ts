@@ -1,7 +1,7 @@
-const InputArea = () => `
+const InputArea = ({ sendButtonHtml }) => `
   <form class="messenger-ui__input-area">
     <input>
-    <button>&gt;</button>
+    <button>${sendButtonHtml || 'Send'}</button>
   </form>
 `;
 

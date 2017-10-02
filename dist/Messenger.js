@@ -5,11 +5,12 @@ var InputArea_1 = require("./components/InputArea");
 var Message_1 = require("./components/Message");
 var Messenger = /** @class */ (function () {
     function Messenger(element, options) {
+        if (options === void 0) { options = {}; }
         this.element = element;
         this.header = this.createHeader();
         this.header.innerHTML = Header_1["default"]();
         this.messageListArea = this.createMessageListArea();
-        this.inputArea = this.createInputArea();
+        this.inputArea = this.createInputArea(options);
         this.element.classList.add('mesenger-ui');
         this.messageListArea.classList.add('messenger-ui__message-list');
     }
@@ -23,10 +24,10 @@ var Messenger = /** @class */ (function () {
         this.element.appendChild(messageListArea);
         return messageListArea;
     };
-    Messenger.prototype.createInputArea = function () {
+    Messenger.prototype.createInputArea = function (options) {
         var _this = this;
         var inputArea = document.createElement('div');
-        inputArea.innerHTML = InputArea_1["default"]();
+        inputArea.innerHTML = InputArea_1["default"](options);
         this.element.appendChild(inputArea);
         // Add submit event listener
         var form = inputArea.querySelector('form');

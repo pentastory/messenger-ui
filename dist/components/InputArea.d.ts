@@ -1,2 +1,4 @@
-declare const InputArea: () => string;
+declare const InputArea: ({sendButtonHtml}: {
+    sendButtonHtml: any;
+}) => string;
 export default InputArea;

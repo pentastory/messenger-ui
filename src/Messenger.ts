@@ -8,12 +8,12 @@ export default class Messenger {
   private messageListArea: Element;
   private inputArea: Element;
 
-  constructor(element: Element, options) {
+  constructor(element: Element, options = {}) {
     this.element = element;
     this.header = this.createHeader();
     this.header.innerHTML = Header();
     this.messageListArea = this.createMessageListArea();
-    this.inputArea = this.createInputArea();
+    this.inputArea = this.createInputArea(options);
 
     this.element.classList.add('mesenger-ui');
     this.messageListArea.classList.add('messenger-ui__message-list');
@@ -31,9 +31,9 @@ export default class Messenger {
     return messageListArea;
   }
 
-  private createInputArea() {
+  private createInputArea(options: any) {
     const inputArea = document.createElement('div');
-    inputArea.innerHTML = InputArea();
+    inputArea.innerHTML = InputArea(options);
     this.element.appendChild(inputArea);
 
     // Add submit event listener
