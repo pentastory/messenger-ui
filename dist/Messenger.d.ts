@@ -3,10 +3,10 @@ export default class Messenger {
     private header;
     private messageListArea;
     private inputArea;
-    constructor(element: Element, options: any);
+    constructor(element: Element, options?: {});
     private createHeader();
     private createMessageListArea();
-    private createInputArea();
+    private createInputArea(options);
     private onSubmit(event);
     addMessage(data: any): void;
 }
