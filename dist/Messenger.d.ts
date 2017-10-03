@@ -1,8 +1,8 @@
 export default class Messenger {
-    private element;
-    private header;
-    private messageListArea;
-    private inputArea;
+    protected element: Element;
+    protected header: Element;
+    protected messageListArea: Element;
+    protected inputArea: Element;
     constructor(element: Element, options?: {});
     private createHeader();
     private createMessageListArea();
