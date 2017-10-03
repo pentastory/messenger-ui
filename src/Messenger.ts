@@ -3,10 +3,10 @@ import InputArea from './components/InputArea';
 import Message from './components/Message';
 
 export default class Messenger {
-  private element: Element;
-  private header: Element;
-  private messageListArea: Element;
-  private inputArea: Element;
+  protected element: Element;
+  protected header: Element;
+  protected messageListArea: Element;
+  protected inputArea: Element;
 
   constructor(element: Element, options = {}) {
     this.element = element;
