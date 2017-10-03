@@ -15,7 +15,7 @@ export default class Messenger {
     this.messageListArea = this.createMessageListArea();
     this.inputArea = this.createInputArea(options);
 
-    this.element.classList.add('mesenger-ui');
+    this.element.classList.add('messenger-ui');
     this.messageListArea.classList.add('messenger-ui__message-list');
   }
 
